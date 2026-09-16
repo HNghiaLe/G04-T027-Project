@@ -9,7 +9,8 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 | Mã | Tóm tắt | Loại | Mục guideline | Trạng thái | Kết quả |
 |---|---|---|---|---|---|
-| [P-001](#p-001) |  |  |  |  |  |
+| [P-001](#p-001) | Cách vẽ polyline cho lane/crosswalk chưa rõ | Guideline mơ hồ | §2, §4.2 | 🔴 Mở | — |
+| [P-002](#p-002) | Frame ban đêm bị mờ và lóa mạnh, khó xác định annotation | Guideline chưa nói tới | §5 | 🔴 Mở | — |
 
 **Loại**
 
@@ -26,16 +27,43 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 ## P-001
 
-**[Tóm tắt một dòng]**
+**Cách vẽ polyline cho lane/crosswalk chưa rõ**
 
-- **Loại:** Guideline chưa nói tới / Guideline mơ hồ / Guideline mâu thuẫn / Pain point công cụ
-- **Mục guideline:** §
-- **Người phát hiện:** 
-- **Link CVAT:** 
-  - 
-- **Mô tả:**
-- **Các cách hiểu:** 
-  1.
-  2.
-- **Xử lý tạm trong lúc chờ:**
-- **Kết quả:** 
+- **Loại:** Guideline mơ hồ
+- **Mục guideline:** §2, §4.2
+- **Người phát hiện:** @laihoangduy2424 · 16/09/2026
+- **Link CVAT:**
+  - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=77
+  - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=79
+- **Mô tả:** Guideline quy định `lane/crosswalk` sử dụng Polyline nhưng chưa mô tả cụ thể
+  hướng và hình học của polyline đối với zebra crossing. Vấn đề xuất hiện ở nhiều frame
+  có crosswalk trong dataset.
+- **Các cách hiểu:**
+  1. Vẽ một polyline theo hướng người đi bộ qua đường, cắt ngang các vạch sơn của crosswalk.
+  2. Vẽ polyline dọc theo các vạch sơn crosswalk, theo hướng các vạch kéo ngang mặt đường.
+  3. Vẽ nhiều polyline, mỗi vạch sơn của crosswalk là một polyline riêng.
+- **Xử lý tạm trong lúc chờ:** ghi nhận các frame có crosswalk và chờ mentor/lead chốt
+  một quy tắc thống nhất trước khi sửa toàn bộ các frame tương tự.
+- **Kết quả:** 🔴 Mở
+- 
+## P-002
+
+**Frame ban đêm bị mờ và lóa mạnh, khó xác định annotation**
+
+- **Loại:** Guideline chưa nói tới
+- **Mục guideline:** §5 — Quy tắc khi class hoặc boundary không rõ
+- **Người phát hiện:** @laihoangduy2424 · 16/09/2026
+- **Link CVAT:**
+  - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=76
+- **Mô tả:** Toàn frame có chất lượng thị giác thấp do cảnh ban đêm, kính/camera bị mờ
+  và ánh sáng từ đèn xe/đèn đường gây flare. Một số object gần vẫn nhận diện được,
+  nhưng lane marking, boundary và nhiều object ở xa rất khó xác định chính xác.
+  Guideline chưa nêu tiêu chí để quyết định với một frame suy giảm chất lượng toàn cục
+  như vậy thì cần annotate phần còn nhìn rõ hay bỏ/escalate toàn bộ frame.
+- **Các cách hiểu:**
+  1. Vẫn annotate tất cả object/lane có đủ bằng chứng thị giác; phần không chắc thì bỏ và đưa review.
+  2. Chỉ annotate các object rõ ràng, không annotate lane/boundary bị mất dấu do blur và glare.
+  3. Đưa toàn bộ frame vào review nếu chất lượng ảnh không đủ để annotation nhất quán.
+- **Xử lý tạm trong lúc chờ:** chỉ gán các đối tượng có class và boundary đủ rõ;
+  không suy đoán các lane/object bị che bởi blur hoặc glare, đồng thời đánh dấu frame để reviewer kiểm tra.
+- **Kết quả:** 🔴 Mở
