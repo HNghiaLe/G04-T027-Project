@@ -31,7 +31,7 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 - **Loại:** Guideline mơ hồ
 - **Mục guideline:** §2, §4.2
-- **Người phát hiện:** @laihoangduy2424 · 16/09/2026
+- **Người phát hiện:** @laihoangduy2424-Lại Hoàng Duy-2A202602271 · 16/09/2026
 - **Link CVAT:**
   - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=77
   - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=79
@@ -52,7 +52,7 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 - **Loại:** Guideline chưa nói tới
 - **Mục guideline:** §5 — Quy tắc khi class hoặc boundary không rõ
-- **Người phát hiện:** @laihoangduy2424 · 16/09/2026
+- **Người phát hiện:** @laihoangduy2424-Lại Hoàng Duy-2A202602271 · 16/09/2026
 - **Link CVAT:**
   - https://cvat.note.transformerlabs.ai/tasks/146/jobs/1439?frame=76
 - **Mô tả:** Toàn frame có chất lượng thị giác thấp do cảnh ban đêm, kính/camera bị mờ
