@@ -24,7 +24,7 @@
 | 3.2 | Job [SV tự điền] — Semantic Segmentation | 2A202602271 | 2A202602192 | ⬜ 0% | |
 | 4.1 | Job 1437 — 2D Bounding Box/Polygon/Polyline | 2A202602202 | 2A202602192 | 🟡 50% | |
 | 4.2 | Job 1652 — Semantic Segmentation | 2A202602202 | 2A202602192 | ⬜ 0% | |
-| 5.1 | Job [SV tự điền] — 2D Bounding Box/Polygon/Polyline | 2A202602075 | 2A202602192 | ⬜ 0% | |
+| 5.1 | Job 1436 — 2D Bounding Box/Polygon/Polyline | 2A202602075 | 2A202602192 | 🟡 45% | |
 | 5.2 | Job [SV tự điền] — Semantic Segmentation | 2A202602075 | 2A202602192 | ⬜ 0% | |
 
 Mức hoàn thành: ✅ xong **và đã qua review** · 🟡 đang làm (ghi %) · ⛔ bị chặn (ghi lý do) · ⬜ chưa bắt đầu
