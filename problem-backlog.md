@@ -94,3 +94,15 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 - **Các cách hiểu:**
 - **Xử lý tạm trong lúc chờ:**
 - **Kết quả:** 🔴 Mở
+
+
+## P-005
+**Quy tắc gán nhãn cho nhiều xe ô tô đỗ/di chuyển san sát và bị che khuất một phần (occlusion/cluster)**
+- **Loại:** Guideline mơ hồ / Thiếu case thực tế
+- **Mục guideline:** §1 — Quy tắc bounding box cho Phương tiện (Car/Vehicle)
+- **Người phát hiện:** @orc123-PHẠM NGỌC ĐÔNG-2A202602075 · 17/09/2026
+- **Link CVAT:** https://cvat.note.transformerlabs.ai/tasks/146/jobs/1436
+- **Mô tả:** Trong các khung cảnh có mật độ phương tiện cao (như hàng xe đỗ phía xa dưới bóng râm hoặc các xe di chuyển nối đuôi nhau gần nhau), các xe thường xuyên bị che khuất bởi thân xe khác, cây cối hoặc bị giảm kích thước điểm ảnh (low resolution). Guideline chưa nêu rõ ngưỡng kích thước tối thiểu (min pixel/size) để bỏ qua hay bắt buộc gán nhãn, cũng như quy tắc xử lý khi các xe đỗ san sát tạo thành một cụm (cluster).
+- **Các cách hiểu:** Gán nhãn từng xe riêng lẻ bất kể khoảng cách và mức độ che khuất, ước lượng toàn bộ phần thân bị ẩn (bounding box bao trọn cả phần bị che). Chỉ gán bounding box cho phần nhìn thấy được (visible boundary), bỏ qua phần xe bị che khuất hoàn toàn. Bỏ qua các xe ở xa có kích thước nhỏ hơn ngưỡng quy định (ví dụ < 10–15 px) hoặc nằm trong cụm đỗ khuất dưới bóng râm không phân biệt rõ biên dạng từng xe; chỉ tập trung gán các xe độc lập ở cự ly gần đến trung bình.
+- **Xử lý tạm trong lúc chờ:** Chỉ gán nhãn cho các xe nhìn rõ ranh giới thân xe và có kích thước nhận diện được; bật thuộc tính occluded: true cho các xe bị che khuất một phần và tránh gom nhiều xe vào một bounding box chung.
+- **Kết quả:** 🔴 Mở
