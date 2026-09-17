@@ -11,6 +11,8 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 |---|---|---|---|---|---|
 | [P-001](#p-001) | Cách vẽ polyline cho lane/crosswalk chưa rõ | Guideline mơ hồ | §2, §4.2 | 🔴 Mở | — |
 | [P-002](#p-002) | Frame ban đêm bị mờ và lóa mạnh, khó xác định annotation | Guideline chưa nói tới | §5 | 🔴 Mở | — |
+|[P-003](#p-003) |Cách xử lý segmentation trường hợp 1 cột có nhiều biển báo, nhiều đèn|Guideline chưa nói tới ||🔴 Mở| —|
+|[P-004](#p-004) |Cách xử lý segmentation trường hợp vùng trời/tòa nhà bị object khác phía trước cắt ngang|Guideline chưa nói tới ||🔴 Mở| —|
 
 **Loại**
 
@@ -66,4 +68,29 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
   3. Đưa toàn bộ frame vào review nếu chất lượng ảnh không đủ để annotation nhất quán.
 - **Xử lý tạm trong lúc chờ:** chỉ gán các đối tượng có class và boundary đủ rõ;
   không suy đoán các lane/object bị che bởi blur hoặc glare, đồng thời đánh dấu frame để reviewer kiểm tra.
+- **Kết quả:** 🔴 Mở
+
+## P-003
+**Cách xử lý trường hợp 1 cột có nhiều biển báo, nhiều đèn**
+
+- **Loại:** Guideline chưa nói tới
+- **Mục guideline:** Bài SEMANTIC SEGMENTATION, không có guideline về việc tách object
+- **Người phát hiện:** @linhhl2002-Hoàng Gia Linh-2A202602192 · 16/09/2026
+- **Link CVAT:** https://cvat.note.transformerlabs.ai/tasks/200/jobs/1650
+- **Mô tả:** Cột biển báo ở khoảng giữa, lệch phải của bức ảnh có 2 biển báo
+- **Các cách hiểu:**
+  1. Semantic segmentation chỉ cần gán đúng class cho pixel
+- **Xử lý tạm trong lúc chờ:**
+- **Kết quả:** 🔴 Mở
+
+## P-004
+**Cách xử lý trường hợp vùng trời/tòa nhà bị object khác phía trước cắt ngang**
+
+- **Loại:** Guideline chưa nói tới
+- **Mục guideline:** Bài SEMANTIC SEGMENTATION, không có guideline về việc tách object
+- **Người phát hiện:** @linhhl2002-Hoàng Gia Linh-2A202602192 · 16/09/2026
+- **Link CVAT:** https://cvat.note.transformerlabs.ai/tasks/200/jobs/1650
+- **Mô tả:** Vùng trời và tòa nhà bị cột điện phía trước cắt thành các vùng nhỏ, có thể tách các vùng nhỏ đó thành các object riêng theo đúng class hay cần xác định cùng 1 object
+- **Các cách hiểu:**
+- **Xử lý tạm trong lúc chờ:**
 - **Kết quả:** 🔴 Mở
