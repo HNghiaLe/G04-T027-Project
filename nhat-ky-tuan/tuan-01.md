@@ -20,8 +20,8 @@
 |---|---|---|---|---|---|
 | 1 | Job 1434 — Gán nhãn dữ liệu | 2A202602285 | 2A202602192 | 🟡 55% | Lead làm |
 | 2 | Job 1650 — Gán nhãn dữ liệu | 2A202602192 | 2A202602285 | ⬜ 0% | Reviewer làm |
-| 3.1 | Job [SV tự điền] — 2D Bounding Box/Polygon/Polyline | 2A202602271 | 2A202602192 | ⬜ 0% | |
-| 3.2 | Job [SV tự điền] — Semantic Segmentation | 2A202602271 | 2A202602192 | ⬜ 0% | |
+| 3.1 | Job 1439 — 2D Bounding Box/Polygon/Polyline | 2A202602271 | 2A202602192 | 🟡 60% | Chờ guideline |
+| 3.2 | Job 1653 — Semantic Segmentation | 2A202602271 | 2A202602192 | 🟡 10% | |
 | 4.1 | Job 1437 — 2D Bounding Box/Polygon/Polyline | 2A202602202 | 2A202602192 | 🟡 50% | |
 | 4.2 | Job 1652 — Semantic Segmentation | 2A202602202 | 2A202602192 | ⬜ 0% | |
 | 5.1 | Job 1436 — 2D Bounding Box/Polygon/Polyline | 2A202602075 | 2A202602192 | 🟡 45% | |
